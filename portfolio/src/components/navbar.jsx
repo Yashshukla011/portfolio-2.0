@@ -30,12 +30,14 @@ function Navbar() {
           ))}
         </div>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full border border-white/10 px-5 py-2.5 text-sm font-semibold text-[#f2f2f3] transition hover:border-[#34d399]/50 hover:text-[#34d399] md:block"
-        >
-          Let&apos;s Talk
-        </a>
+       <a
+  href="/Yash_Shukla_Resume (1).pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden rounded-full border border-[#34d399] bg-[#34d399] px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[#2dc48d] md:block"
+>
+  View Resume
+</a>
 
         <button
           onClick={() => setOpen(!open)}

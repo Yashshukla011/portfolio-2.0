@@ -19,15 +19,15 @@ const PROJECTS = [
     tech: ["React", "JavaScript", "Tailwind CSS"],
     link: "https://quizegame-cyan.vercel.app/",
   },
-  {
-    n: "03",
-    featured: false,
-    tag: "JavaScript Game",
-    title: "Snake Game",
-    desc: "A classic Snake game built with JavaScript featuring keyboard controls, score tracking and dynamic gameplay.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: null,
-  },
+{
+  n: "03",
+  featured: true,
+  tag: "Full Stack MERN",
+  title: "Car Rental Platform",
+  desc: "A full-stack Car Rental platform where users can browse available cars, submit rental inquiries, and manage bookings. It includes a secure admin dashboard for car management, customer inquiries, notifications, and authentication. Built with the MERN stack and deployed on Vercel and Render.",
+  tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+  link: "https://cars-rental-project-9bip-cvqalejhk-yashshukla011s-projects.vercel.app/",
+},
 ];
 
 function Projects() {
