@@ -9,7 +9,7 @@ function LeetCode() {
   const [activeDays, setActiveDays] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/leetcode/activity")
+    fetch("https://portfolio-2-0-1-7o8u.onrender.com/api/leetcode/activity")
       .then((res) => {
         if (!res.ok) {
           throw new Error("API Failed");

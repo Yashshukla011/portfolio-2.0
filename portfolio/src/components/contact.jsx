@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   FaEnvelope,
   FaGithub,
@@ -55,7 +56,7 @@ function Contact() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/contact/send",
+        "https://portfolio-2-0-1-7o8u.onrender.com/api/contact/send",
         formData
       );
 
