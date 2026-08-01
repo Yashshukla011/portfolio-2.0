@@ -1,3 +1,6 @@
+
+import Contact from "../Model/contact.model.js";
+import nodemailer from "nodemailer";
 export const sendContact = async (req, res) => {
   try {
     console.log("1. Request received");
