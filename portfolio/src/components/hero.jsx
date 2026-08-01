@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaCode } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-
+import yash from "../assets/yash_photo.png"
 function Hero() {
   return (
     <section
@@ -21,11 +21,10 @@ function Hero() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#34d399]">
             About Me
           </p>
-
-          <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-[#f2f2f3] sm:text-6xl lg:text-7xl">
-            I Build Digital
-            <span className="block">Experiences.</span>
-          </h1>
+<h1 className="text-5xl font-black leading-[1.05] tracking-tight text-[#f2f2f3] sm:text-6xl lg:text-7xl">
+  Hi, I'm
+  <span className="block text-[#34d399]">Yash Shukla.</span>
+</h1>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-[#a1a1aa]">
             I am a BCA student and aspiring full-stack developer. I build
@@ -93,7 +92,12 @@ function Hero() {
         >
           <div className="rounded-[28px] border border-white/10 bg-[#111114] p-8 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
             <div className="flex aspect-square items-center justify-center rounded-2xl bg-gradient-to-br from-[#1a1a1f] to-[#0d0d10] text-6xl font-black text-[#34d399]">
-              YS
+                            <img
+                src={yash}
+                alt="Yash Shukla"
+                className="h-full w-full object-cover"
+              />
+
             </div>
             <div className="mt-6 flex items-center gap-3 text-[#a1a1aa]">
               <FaCode className="text-[#34d399]" />
