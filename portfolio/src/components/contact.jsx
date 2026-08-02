@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 import {
   FaEnvelope,
   FaGithub,
@@ -51,28 +52,46 @@ function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await axios.post(
-        "https://portfolio-2-0-1-7o8u.onrender.com/api/contact/send",
-        formData
-      );
+  const form = new FormData();
 
-      console.log(res.data);
+  form.append("access_key", "4c7a7c51-ea05-4890-982c-5412453a7007");
+  form.append("name", formData.name);
+  form.append("email", formData.email);
+  form.append("subject", formData.subject);
+  form.append("message", formData.message);
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: form,
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
       setSubmitted(true);
 
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
 
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
-    } catch (error) {
-      console.log("Contact Error:", error.response?.data || error.message);
+    } else {
+      alert(data.message);
     }
-  };
-
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  }
+};
   return (
     <section id="contact" className="relative overflow-hidden bg-[#0a0a0c] px-6 py-28 sm:px-10 lg:px-12">
       {/* single accent glow, consistent with rest of site */}
