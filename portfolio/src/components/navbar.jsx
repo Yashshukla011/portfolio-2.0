@@ -30,11 +30,11 @@ function Navbar() {
           ))}
         </div>
 
-       <a
+     <a
   href="/Yash_Shukla_Resume (1).pdf"
   target="_blank"
   rel="noopener noreferrer"
-  className="hidden rounded-full border border-[#34d399] bg-[#34d399] px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[#2dc48d] md:block"
+  className="rounded-full border border-[#34d399] bg-[#34d399] px-3 py-2 text-xs font-semibold text-black transition hover:bg-[#2dc48d] sm:px-5 sm:py-2.5 sm:text-sm"
 >
   View Resume
 </a>
