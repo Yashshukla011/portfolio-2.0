@@ -12,9 +12,11 @@ dotenv.config();
 const app = express();
 
 
-  "http://localhost:5173",
+const allowedOrigins = [
+   "http://localhost:5173",
   "https://portfolio-2-0-9fet.vercel.app",
-  "https://portfolio-2-0-tau-ebon.vercel.app",
+  "https://portfolio-2-0-tau-ebon.vercel.app",,
+];
 
 app.use(
   cors({
